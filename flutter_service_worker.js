@@ -28,13 +28,22 @@ const RESOURCES = {"assets/AssetManifest.bin": "c850d7c0ab699081203e8365f8c3c65b
 "canvaskit/skwasm.worker.js": "89990e8c92bcb123999aa81f7e203b1c",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "flutter.js": "f393d3c16b631f36852323de8e583132",
+<<<<<<< HEAD
 "flutter_bootstrap.js": "7ca5a81e5aa9827964c75944a2452350",
+=======
+"flutter_bootstrap.js": "bddd9c5307bde493281cd458dd8c9978",
+>>>>>>> 12e01b8c208eb8a29d5e4ed36de698a7d1f44bd6
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
+<<<<<<< HEAD
 "index.html": "45eee016cf4f94023ffaefae62a39cbc",
 "/": "45eee016cf4f94023ffaefae62a39cbc",
+=======
+"index.html": "faeaee4c3c1b2352574819f5ab41bf15",
+"/": "faeaee4c3c1b2352574819f5ab41bf15",
+>>>>>>> 12e01b8c208eb8a29d5e4ed36de698a7d1f44bd6
 "main.dart.js": "6f4fb1bd804802d4abe112702c332161",
 "manifest.json": "d8fe34f7ae4c072a77b924e01dac8a50",
 "version.json": "9b818ca9511483c901bed1545384376c"};
