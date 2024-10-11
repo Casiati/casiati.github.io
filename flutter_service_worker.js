@@ -3,9 +3,9 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "4dedc212a464b52255513be8ed42cac2",
-"assets/AssetManifest.bin.json": "ebe9dd9dc5f466c404e4985755831da1",
-"assets/AssetManifest.json": "30ea0baea4f7ed373c5b6f38bdcc4952",
+const RESOURCES = {"assets/AssetManifest.bin": "207eb764358a3c055e207ed470c0e9b7",
+"assets/AssetManifest.bin.json": "bceefbc8caaa6bb58360c46b4fad0c74",
+"assets/AssetManifest.json": "5e099f30d80d2fde6dd26d0ea0310ab6",
 "assets/assets/flag-brazil.png": "8cfba2af02d8033ee09dc2e866a24e05",
 "assets/assets/flag-us.png": "94a6d34ac826f51d3c11148058cb94b5",
 "assets/assets/github.png": "a90cedcaac3f83b8e7bc478053ba7ffe",
@@ -15,6 +15,13 @@ const RESOURCES = {"assets/AssetManifest.bin": "4dedc212a464b52255513be8ed42cac2
 "assets/assets/nubank_clone/img2.png": "d64c16db33e62f3be2cea6a1834107c3",
 "assets/assets/nubank_clone/img3.png": "d8bfca33bdb8acc5ec3e297230c535ac",
 "assets/assets/nubank_clone/img4.png": "03be22a95eb6879029339b4856fd0558",
+"assets/assets/onde_assistir/img1.png": "1e1ba6b6634bba4214f02135e5c253fa",
+"assets/assets/onde_assistir/img2.png": "838c668f3441c5047925f062ef6389fd",
+"assets/assets/onde_assistir/img3.png": "935cb27c0e632117ff72a64b77040fee",
+"assets/assets/onde_assistir/img4.png": "182d74f77bc50fa311abf9e178ac1248",
+"assets/assets/onde_assistir/img5.png": "9acdd1d45690b7c721492deda8d5f241",
+"assets/assets/onde_assistir/img6.png": "7807aff870d1fd8631c4f8546cc0197d",
+"assets/assets/onde_assistir/img7.png": "5a52e8fb02dd93c5f75db6873b44d011",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/fonts/MaterialIcons-Regular.otf": "70b8bf83d7567a16d35103f8e6cbbe46",
 "assets/NOTICES": "d064bea67da911f5815eefba696a0a45",
@@ -32,14 +39,14 @@ const RESOURCES = {"assets/AssetManifest.bin": "4dedc212a464b52255513be8ed42cac2
 "canvaskit/skwasm.worker.js": "89990e8c92bcb123999aa81f7e203b1c",
 "favicon.png": "3872f4f3f9fcf800c35ff7cb8d3d937c",
 "flutter.js": "f393d3c16b631f36852323de8e583132",
-"flutter_bootstrap.js": "6d7809f439c5754f6e47aa81668081c3",
+"flutter_bootstrap.js": "bc280d03bbfaf51c54f6036cb7d56d0f",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
 "index.html": "bf7aaf771b219fe9a81c32fd0c3cbafc",
 "/": "bf7aaf771b219fe9a81c32fd0c3cbafc",
-"main.dart.js": "571613765bda1bfff206c1dc9890a4ee",
+"main.dart.js": "4b3fff4559c23b559adaa6d57ff09849",
 "manifest.json": "d8fe34f7ae4c072a77b924e01dac8a50",
 "version.json": "9b818ca9511483c901bed1545384376c"};
 // The application shell files that are downloaded before a service worker can
