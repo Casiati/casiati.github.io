@@ -1,48 +1,48 @@
-﻿const terminalInput = document.getElementById('terminalInput');
+const terminalInput = document.getElementById('terminalInput');
 const terminalOutput = document.getElementById('terminalOutput');
 const clearTerminalBtn = document.getElementById('clearTerminalBtn');
 
 const commands = {
   help: () => `
-Comandos disponÃ­veis:
+Comandos disponíveis:
   whoami          - Sobre Lucas Robiati
-  certifications  - Lista de certificaÃ§Ãµes e formaÃ§Ãµes
-  skills          - Stack tecnolÃ³gica e ferramentas
+  certifications  - Lista de certificações e formações
+  skills          - Stack tecnológica e ferramentas
   projects        - Principais projetos em destaque
-  terraform       - SimulaÃ§Ã£o de terraform plan
-  docker          - SimulaÃ§Ã£o de containers ativos
-  contact         - Links de contato e redes sociais
+  terraform       - Simulação de terraform plan
+  docker          - Simulação de containers ativos
+  contact         - Links de contato e redes profissionais
   clear           - Limpa a tela do terminal
 `,
   whoami: () => `
-Lucas Robiati â€” DevOps / Cloud / Platform Engineer
-Graduando em AnÃ¡lise e Desenvolvimento de Sistemas (ADS).
-Focado em arquiteturas resilientes na AWS, automaÃ§Ã£o com Terraform,
-orquestraÃ§Ã£o de containers com Kubernetes/Docker e esteiras CI/CD DevSecOps.
+Lucas Robiati — DevOps / Cloud / Platform Engineer
+Graduando em Análise e Desenvolvimento de Sistemas (ADS).
+Focado em arquiteturas resilientes na AWS, automação com Terraform,
+orquestração de containers com Kubernetes/Docker e esteiras CI/CD DevSecOps.
 `,
   certifications: () => `
-ðŸ† CertificaÃ§Ãµes & FormaÃ§Ãµes:
-  â€¢ AWS Certified Solutions Architect â€“ Associate (SAA)
-  â€¢ FormaÃ§Ã£o Kubernetes & Docker â€“ DIO (Pods, Services, Deployments, Clusters Nuvem)
-  â€¢ FormaÃ§Ã£o GitHub Certification & Actions â€“ DIO (CI/CD Pipelines, GitOps)
-  â€¢ FormaÃ§Ã£o AWS Cloud Practitioner â€“ DIO / AWS
-  â€¢ FormaÃ§Ã£o ChatGPT for Devs & AI Engineering â€“ DIO
+🏆 Certificações & Formações:
+  • AWS Certified Solutions Architect – Associate (SAA)
+  • Formação Kubernetes & Docker – DIO (Pods, Services, Deployments, Clusters Nuvem)
+  • Formação GitHub Certification & Actions – DIO (CI/CD Pipelines, GitOps)
+  • Formação AWS Cloud Practitioner – DIO / AWS
+  • Formação ChatGPT for Devs & AI Engineering – DIO
 `,
   skills: () => `
-ðŸ› ï¸ Tech Stack & Ecossistema:
-  â€¢ Cloud: AWS (EC2, S3, RDS, VPC, IAM, EKS, CloudWatch), Cloudflare
-  â€¢ IaC: Terraform, OpenTofu, Ansible
-  â€¢ Containers: Docker, Docker Compose, Kubernetes, Helm, ArgoCD
-  â€¢ CI/CD & DevSecOps: GitHub Actions, GitLab CI, Trivy, Gitleaks, SonarQube
-  â€¢ Observabilidade: Prometheus, Grafana, Datadog
-  â€¢ Scripting: Bash, Python, Dart/Flutter, SQL
+🛠️ Tech Stack & Ecossistema:
+  • Cloud: AWS (EC2, S3, RDS, VPC, IAM, EKS, CloudWatch), Cloudflare
+  • IaC: Terraform, OpenTofu, Ansible
+  • Containers: Docker, Docker Compose, Kubernetes, Helm, ArgoCD
+  • CI/CD & DevSecOps: GitHub Actions, GitLab CI, Trivy, Gitleaks, SonarQube
+  • Observabilidade: Prometheus, Grafana, Datadog
+  • Scripting: Bash, Python, Dart/Flutter, SQL
 `,
   projects: () => `
-ðŸ“¦ Projetos no GitHub:
-  1. devsecops-ci-cd-pipeline  â†’ Pipeline com GitHub Actions, Trivy, Gitleaks e Docker
-  2. terraform-aws-hands-on    â†’ Infraestrutura modular AWS com Terraform
-  3. nubank_clone              â†’ App Flutter modular com testes e clean architecture
-  4. RELAT-RIO_IMPLEMENTA-O_AWSâ†’ Case de arquitetura e migraÃ§Ã£o em nuvem AWS
+📦 Projetos no GitHub:
+  1. devsecops-ci-cd-pipeline  → Pipeline com GitHub Actions, Trivy, Gitleaks e Docker
+  2. terraform-aws-hands-on    → Infraestrutura modular AWS com Terraform
+  3. nubank_clone              → App Flutter modular com testes e clean architecture
+  4. RELAT-RIO_IMPLEMENTA-O_AWS→ Case de arquitetura e migração em nuvem AWS
 
 Acesse: https://github.com/Casiati
 `,
@@ -63,10 +63,10 @@ f6e5d4c3b2a1   prom/prometheus       Up 14 hours    0.0.0.0:9090->9090/tcp
 123456789abc   grafana/grafana       Up 14 hours    0.0.0.0:3000->3000/tcp
 `,
   contact: () => `
-ðŸ“¬ Contatos:
-  â€¢ LinkedIn: https://www.linkedin.com/in/lucas-robiati-129795133/
-  â€¢ GitHub:   https://github.com/Casiati
-  â€¢ E-mail:   lucasrobiati@gmail.com
+📬 Contatos & Redes:
+  • LinkedIn: https://www.linkedin.com/in/lucas-robiati-129795133/
+  • GitHub:   https://github.com/Casiati
+  • E-mail:   lucasrobiati@gmail.com
 `,
   clear: () => {
     terminalOutput.innerHTML = '';
@@ -96,7 +96,7 @@ function executeCommand(rawCmd) {
   } else if (cmd.startsWith('terraform')) {
     responseText = commands.terraform();
   } else {
-    responseText = `Comando nÃ£o reconhecido: '${escapeHtml(rawCmd)}'. Digite 'help' para ver os comandos disponÃ­veis.`;
+    responseText = `Comando não reconhecido: '${escapeHtml(rawCmd)}'. Digite 'help' para ver os comandos disponíveis.`;
   }
 
   if (responseText) {

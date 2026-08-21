@@ -1,4 +1,4 @@
-﻿# ðŸŒ Lucas Robiati â€” Personal Portfolio
+# ðŸŒ Lucas Robiati â€” Personal Portfolio
 
 PortfÃ³lio profissional de **Lucas Robiati** ([@Casiati](https://github.com/Casiati)), DevOps & Cloud Platform Engineer.
 

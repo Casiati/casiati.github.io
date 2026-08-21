@@ -1,4 +1,4 @@
-﻿// Mobile Menu Toggle
+// Mobile Menu Toggle
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
@@ -38,20 +38,22 @@ filterBtns.forEach(btn => {
 
 // Copy Email Button with Toast Feedback
 const copyEmailBtn = document.getElementById('copyEmailBtn');
-const copyEmailText = document.getElementById('copyEmailText');
 
-if (copyEmailBtn && copyEmailText) {
+if (copyEmailBtn) {
   copyEmailBtn.addEventListener('click', () => {
-    const email = copyEmailBtn.getAttribute('data-email');
+    const email = copyEmailBtn.getAttribute('data-email') || 'lucasrobiati@gmail.com';
     navigator.clipboard.writeText(email).then(() => {
-      const originalText = copyEmailText.textContent;
-      copyEmailText.textContent = 'E-mail Copiado! âœ“';
+      const originalHtml = copyEmailBtn.innerHTML;
+      copyEmailBtn.innerHTML = '<i class="fa-solid fa-check text-emerald-400"></i> <span>E-mail Copiado!</span>';
       copyEmailBtn.classList.add('border-emerald-500');
 
       setTimeout(() => {
-        copyEmailText.textContent = originalText;
+        copyEmailBtn.innerHTML = originalHtml;
         copyEmailBtn.classList.remove('border-emerald-500');
       }, 2500);
+    }).catch(() => {
+      // Fallback
+      alert('E-mail: ' + email);
     });
   });
 }
