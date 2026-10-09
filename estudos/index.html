@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Estudos & Cursos | Lucas Robiati</title>
+  <meta name="description" content="Hub pessoal de curadoria de cursos gratuitos em DevOps, Cloud, Linux e certificacoes.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* === TOKENS === */
+    :root {
+      --bg-base:       #09090b;
+      --bg-card:       #121214;
+      --bg-card-hover: #161618;
+      --bg-highlight:  #141416;
+      --border:        #27272a;
+      --border-subtle: #1f1f21;
+      --text-primary:  #e4e4e7;
+      --text-secondary:#a1a1aa;
+      --text-muted:    #71717a;
+      --accent-white:  #fafafa;
+      --accent-green:  #10b981;
+      --accent-amber:  #f59e0b;
+      --accent-blue:   #3b82f6;
+      --accent-purple: #8b5cf6;
+      --font-sans:     'Inter', system-ui, sans-serif;
+      --font-mono:     'JetBrains Mono', 'Fira Code', monospace;
+      --radius-sm:     6px;
+      --radius-md:     10px;
+      --radius-lg:     14px;
+      --t:             150ms ease;
+    }
+
+    /* === RESET === */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-base);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; font-family: inherit; }
+
+    /* === LAYOUT === */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* === BACK BAR === */
+    .back-bar { border-bottom: 1px solid var(--border-subtle); padding: 14px 0; }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; font-family: var(--font-mono);
+      color: var(--text-muted); transition: color var(--t);
+    }
+    .back-link:hover { color: var(--text-secondary); }
+
+    /* === PAGE HEADER === */
+    .page-header { padding: 56px 0 40px; border-bottom: 1px solid var(--border-subtle); }
+    .page-eyebrow {
+      font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);
+      letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px;
+    }
+    .page-title {
+      font-size: clamp(24px, 4vw, 36px); font-weight: 700;
+      color: var(--accent-white); letter-spacing: -0.03em; margin-bottom: 12px;
+    }
+    .page-desc { font-size: 15px; color: var(--text-secondary); max-width: 600px; line-height: 1.7; }
+    .page-stats { display: flex; gap: 24px; margin-top: 24px; flex-wrap: wrap; }
+    .stat-item { display: flex; flex-direction: column; gap: 2px; }
+    .stat-val { font-family: var(--font-mono); font-size: 20px; font-weight: 600; color: var(--accent-white); }
+    .stat-label { font-size: 12px; color: var(--text-muted); }
+
+    /* === HIGHLIGHTS === */
+    .highlights-section { padding: 40px 0 0; }
+    .section-label {
+      font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);
+      letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border-subtle); }
+    .highlights-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px; margin-bottom: 40px;
+    }
+    .highlight-card {
+      background: var(--bg-highlight); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 24px; position: relative;
+      overflow: hidden; transition: border-color var(--t), background var(--t);
+    }
+    .highlight-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--accent-amber), transparent);
+    }
+    .highlight-card:hover { border-color: #3f3f46; background: var(--bg-card-hover); }
+    .highlight-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+      color: var(--accent-amber); background: rgba(245,158,11,.08);
+      border: 1px solid rgba(245,158,11,.2); border-radius: 4px;
+      padding: 3px 8px; margin-bottom: 14px;
+    }
+    .highlight-title {
+      font-size: 17px; font-weight: 700; color: var(--accent-white);
+      margin-bottom: 10px; letter-spacing: -0.02em;
+    }
+    .highlight-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 20px; }
+    .highlight-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 9px 16px; background: transparent; border: 1px solid var(--border);
+      border-radius: var(--radius-sm); font-size: 13px; font-weight: 500;
+      color: var(--text-primary); transition: background var(--t), border-color var(--t), color var(--t);
+    }
+    .highlight-btn:hover { background: rgba(255,255,255,.05); border-color: #3f3f46; color: var(--accent-white); }
+
+    /* === CONTROLS === */
+    .controls-section {
+      padding: 28px 0 20px; position: sticky; top: 0; z-index: 10;
+      background: var(--bg-base); border-bottom: 1px solid var(--border-subtle);
+    }
+    .search-wrap { position: relative; margin-bottom: 14px; }
+    .search-icon {
+      position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+      color: var(--text-muted); width: 16px; height: 16px; pointer-events: none;
+    }
+    .search-input {
+      width: 100%; max-width: 480px; background: var(--bg-card);
+      border: 1px solid var(--border); border-radius: var(--radius-md);
+      padding: 11px 14px 11px 40px; font-size: 14px; font-family: var(--font-sans);
+      color: var(--text-primary); outline: none; transition: border-color var(--t);
+    }
+    .search-input::placeholder { color: var(--text-muted); }
+    .search-input:focus { border-color: #3f3f46; }
+    .filters-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .filter-btn {
+      padding: 6px 14px; background: transparent; border: 1px solid var(--border);
+      border-radius: 999px; font-size: 12px; font-family: var(--font-mono);
+      color: var(--text-secondary); transition: all var(--t); white-space: nowrap;
+    }
+    .filter-btn:hover { border-color: #3f3f46; color: var(--text-primary); }
+    .filter-btn.active {
+      background: var(--accent-white); border-color: var(--accent-white);
+      color: #09090b; font-weight: 600;
+    }
+    .results-count { margin-left: auto; font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); }
+
+    /* === CATALOG GRID === */
+    .catalog-section { padding: 32px 0 80px; }
+    .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+    .course-card {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md); padding: 20px;
+      display: flex; flex-direction: column; gap: 12px;
+      transition: border-color var(--t), background var(--t);
+    }
+    .course-card:hover { border-color: var(--border); background: var(--bg-card-hover); }
+    .course-card.hidden { display: none; }
+    .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+    .card-platform { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); letter-spacing: .05em; }
+    .card-badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-family: var(--font-mono); font-size: 10px; font-weight: 600;
+      padding: 2px 7px; border-radius: 4px; white-space: nowrap; flex-shrink: 0;
+    }
+    .badge-cert   { color: var(--accent-green);  background: rgba(16,185,129,.08); border: 1px solid rgba(16,185,129,.2); }
+    .badge-credly { color: var(--accent-blue);   background: rgba(59,130,246,.08); border: 1px solid rgba(59,130,246,.2); }
+    .badge-hours  { color: var(--accent-purple); background: rgba(139,92,246,.08); border: 1px solid rgba(139,92,246,.2); }
+    .card-title { font-size: 15px; font-weight: 600; color: var(--accent-white); line-height: 1.4; letter-spacing: -.01em; }
+    .card-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .card-hours { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--accent-amber); }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .tag-pill {
+      font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);
+      background: rgba(255,255,255,.04); border: 1px solid var(--border-subtle);
+      border-radius: 4px; padding: 2px 7px;
+    }
+    .card-actions { display: flex; gap: 8px; margin-top: auto; }
+    .btn-access {
+      flex: 1; padding: 9px 14px; background: var(--accent-white); border: none;
+      border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+      color: #09090b; text-align: center; transition: opacity var(--t); display: block;
+    }
+    .btn-access:hover { opacity: .88; }
+    .btn-share {
+      padding: 9px 14px; background: transparent; border: 1px solid var(--border);
+      border-radius: var(--radius-sm); font-size: 13px; font-weight: 500;
+      color: var(--text-secondary); display: flex; align-items: center; gap: 5px;
+      transition: background var(--t), border-color var(--t), color var(--t); white-space: nowrap;
+    }
+    .btn-share:hover { background: rgba(255,255,255,.04); border-color: #3f3f46; color: var(--text-primary); }
+    .btn-share svg { width: 14px; height: 14px; }
+
+    /* === EMPTY STATE === */
+    .empty-state { text-align: center; padding: 60px 0; display: none; }
+    .empty-state.visible { display: block; }
+    .empty-state p { font-size: 14px; color: var(--text-muted); font-family: var(--font-mono); }
+
+    /* === TOAST === */
+    #toast {
+      position: fixed; bottom: 28px; left: 50%;
+      transform: translateX(-50%) translateY(12px);
+      background: #18181b; border: 1px solid var(--border); border-radius: var(--radius-md);
+      padding: 12px 20px; font-size: 13px; font-family: var(--font-mono);
+      color: var(--text-primary); display: flex; align-items: center; gap: 8px;
+      opacity: 0; transition: opacity 250ms ease, transform 250ms ease;
+      pointer-events: none; z-index: 100; white-space: nowrap;
+      box-shadow: 0 8px 32px rgba(0,0,0,.4);
+    }
+    #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .toast-icon { color: var(--accent-green); }
+
+    /* === FOOTER === */
+    .page-footer { border-top: 1px solid var(--border-subtle); padding: 24px 0; text-align: center; }
+    .page-footer p { font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 640px) {
+      .highlights-grid { grid-template-columns: 1fr; }
+      .catalog-grid { grid-template-columns: 1fr; }
+      .results-count { width: 100%; margin-left: 0; }
+      .controls-section { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BACK BAR -->
+  <div class="back-bar">
+    <div class="container">
+      <a href="https://casiati.github.io/" class="back-link">
+        &#8592; Voltar ao Portfolio
+      </a>
+    </div>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <p class="page-eyebrow">// hub pessoal · uso interno + compartilhamento</p>
+      <h1 class="page-title">Estudos & Curadoria de Cursos</h1>
+      <p class="page-desc">
+        Catalogo curado de cursos gratuitos em DevOps, Cloud, Linux e certificacoes com certificado e/ou badge Credly.
+        Util para horas complementares da faculdade e preparacao para provas reais.
+      </p>
+      <div class="page-stats">
+        <div class="stat-item">
+          <span class="stat-val" id="totalCursos">20</span>
+          <span class="stat-label">cursos catalogados</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-val">100%</span>
+          <span class="stat-label">gratuitos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-val">+450h</span>
+          <span class="stat-label">carga horaria total</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- DESTAQUES / MENCAO DE HONRA -->
+    <section class="highlights-section">
+      <div class="container">
+        <p class="section-label">&#9733; mencao de honra &amp; comunidade</p>
+        <div class="highlights-grid">
+
+          <!-- Card 1: Escola da Nuvem -->
+          <div class="highlight-card">
+            <span class="highlight-badge">&#127891; Destaque · Formacao Gratuita</span>
+            <h2 class="highlight-title">Escola da Nuvem</h2>
+            <p class="highlight-desc">
+              Instituicao sem fins lucrativos que capacita profissionais em AWS, Azure e GCP, oferecendo treinamentos completos,
+              preparacao para certificacoes oficiais e conexao direta com o mercado de cloud.
+            </p>
+            <a href="https://escoladanuvem.org/" target="_blank" rel="noopener noreferrer" class="highlight-btn">
+              Conhecer a Escola da Nuvem &#8599;
+            </a>
+          </div>
+
+          <!-- Card 2: Maik Biazi -->
+          <div class="highlight-card">
+            <span class="highlight-badge">&#11088; Recomendacao de Ouro · Certificacoes</span>
+            <h2 class="highlight-title">Maik Biazi · DevOps &amp; Cloud</h2>
+            <p class="highlight-desc">
+              O canal onde mais estudei: lives semanais de simulados comentados, resolucao de questoes reais e
+              preparacao direta para certificacoes AWS e DevOps. Essencial para quem vai prestar a prova.
+            </p>
+            <a href="https://www.youtube.com/@maikbiazi-devops/" target="_blank" rel="noopener noreferrer" class="highlight-btn">
+              Assistir no YouTube &#8599;
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTROLES -->
+    <div class="controls-section">
+      <div class="container">
+        <div class="search-wrap">
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+          </svg>
+          <input type="search" id="searchInput" class="search-input"
+            placeholder="Buscar por titulo, plataforma ou tecnologia..." autocomplete="off">
+        </div>
+        <div class="filters-row">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="4linux">4Linux</button>
+          <button class="filter-btn" data-filter="devops-linux">DevOps &amp; Linux</button>
+          <button class="filter-btn" data-filter="cloud-aws">Cloud &amp; AWS</button>
+          <button class="filter-btn" data-filter="credly">Credly Badges</button>
+          <button class="filter-btn" data-filter="horas-faculdade">+20h Faculdade</button>
+          <span class="results-count" id="resultsCount">20 cursos</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATALOGO -->
+    <section class="catalog-section">
+      <div class="container">
+        <div class="catalog-grid" id="catalogGrid"></div>
+        <div class="empty-state" id="emptyState">
+          <p>// nenhum curso encontrado para essa busca</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="page-footer">
+    <div class="container">
+      <p>// uso interno ·
+        <a href="https://casiati.github.io/" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:3px;">
+          casiati.github.io
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast">
+    <span class="toast-icon">&#10003;</span>
+    Link copiado para o WhatsApp!
+  </div>
+
+  <script>
+    /* === BANCO DE DADOS === */
+    const cursos = [
+      { id:1,  titulo:"Observability and Monitoring Fundamentals",      plataforma:"4Linux",                    horas:10,  badge:"cert",   tags:["Observability","Monitoring","Linux"],       filtros:["4linux","devops-linux"],                       link:"https://4linux.com.br/cursos/produto/observability-and-monitoring-fundamentals/" },
+      { id:2,  titulo:"Linux Essentials",                               plataforma:"4Linux",                    horas:20,  badge:"cert",   tags:["Linux","CLI","Fundamentos"],                filtros:["4linux","devops-linux","horas-faculdade"],     link:"https://4linux.com.br/cursos/produto/linux-essentials/" },
+      { id:3,  titulo:"Cloud Fundamentals",                             plataforma:"4Linux",                    horas:10,  badge:"cert",   tags:["Cloud","AWS","Azure","GCP"],                filtros:["4linux","cloud-aws"],                          link:"https://4linux.com.br/cursos/produto/cloud-fundamentals/" },
+      { id:4,  titulo:"Containers Fundamentals",                        plataforma:"4Linux",                    horas:10,  badge:"cert",   tags:["Docker","Containers","Kubernetes"],          filtros:["4linux","devops-linux"],                       link:"https://4linux.com.br/cursos/produto/containers-fundamentals/" },
+      { id:5,  titulo:"DevOps, AIOps e SRE Fundamentals",              plataforma:"4Linux",                    horas:10,  badge:"cert",   tags:["DevOps","SRE","AIOps"],                     filtros:["4linux","devops-linux"],                       link:"https://4linux.com.br/cursos/produto/cursos-produto-devops-aiops-e-sre-fundamentals/" },
+      { id:6,  titulo:"Linux Fundamentals",                             plataforma:"4Linux",                    horas:20,  badge:"cert",   tags:["Linux","Shell","Administracao"],            filtros:["4linux","devops-linux","horas-faculdade"],     link:"https://4linux.com.br/cursos/produto/linux-fundamentals/" },
+      { id:7,  titulo:"Security Essentials",                            plataforma:"4Linux",                    horas:10,  badge:"cert",   tags:["Seguranca","Linux","Cybersecurity"],        filtros:["4linux","devops-linux"],                       link:"https://4linux.com.br/cursos/produto/security-essentials/" },
+      { id:8,  titulo:"Fundamentos de SQL para Banco de Dados",         plataforma:"4Linux",                    horas:10,  badge:"cert",   tags:["SQL","Banco de Dados","Fundamentos"],       filtros:["4linux"],                                      link:"https://4linux.com.br/cursos/produto/fundamentos-de-sql-para-banco-de-dados/" },
+      { id:9,  titulo:"Logica de Programacao",                          plataforma:"4Linux",                    horas:20,  badge:"cert",   tags:["Programacao","Logica","Fundamentos"],       filtros:["4linux","horas-faculdade"],                    link:"https://4linux.com.br/cursos/produto/logica-programacao/" },
+      { id:10, titulo:"Big Data Essentials",                            plataforma:"4Linux",                    horas:10,  badge:"cert",   tags:["Big Data","Analytics","Cloud"],             filtros:["4linux","cloud-aws"],                          link:"https://4linux.com.br/cursos/produto/big-data-essentials/" },
+      { id:11, titulo:"NDG Linux Essentials",                           plataforma:"Cisco Networking Academy",  horas:70,  badge:"credly", tags:["Linux","Cisco","Fundamentos"],              filtros:["credly","devops-linux","horas-faculdade"],     link:"https://www.netacad.com/courses/os-it/ndg-linux-essentials" },
+      { id:12, titulo:"RH024: Red Hat Enterprise Linux Technical Overview", plataforma:"Red Hat Training",      horas:10,  badge:"cert",   tags:["RHEL","Linux","Red Hat"],                   filtros:["devops-linux"],                                link:"https://www.redhat.com/en/services/training/rh024-red-hat-enterprise-linux-technical-overview" },
+      { id:13, titulo:"DO080: Containers, Kubernetes and OpenShift Overview", plataforma:"Red Hat Training",   horas:12,  badge:"cert",   tags:["Kubernetes","OpenShift","Containers"],       filtros:["devops-linux","cloud-aws"],                    link:"https://www.redhat.com/en/services/training/do080-deploying-containerized-applications-technical-overview" },
+      { id:14, titulo:"Fundamentals for Cilium & eBPF",                 plataforma:"Solo.io Academy",           horas:4,   badge:"credly", tags:["eBPF","Cilium","Networking"],               filtros:["credly","devops-linux"],                       link:"https://www.solo.io/solo-academy/" },
+      { id:15, titulo:"Fundamentals for Istio Service Mesh",            plataforma:"Solo.io Academy",           horas:4,   badge:"credly", tags:["Istio","Service Mesh","Kubernetes"],         filtros:["credly","devops-linux","cloud-aws"],           link:"https://www.solo.io/solo-academy/" },
+      { id:16, titulo:"Kong Gateway Foundations",                        plataforma:"Kong Academy",              horas:4,   badge:"credly", tags:["API Gateway","Kong","DevOps"],              filtros:["credly","devops-linux"],                       link:"https://education.konghq.com/" },
+      { id:17, titulo:"AWS Cloud Quest: Cloud Practitioner",             plataforma:"AWS Skill Builder",         horas:20,  badge:"credly", tags:["AWS","Cloud","Practitioner"],               filtros:["credly","cloud-aws","horas-faculdade"],        link:"https://explore.skillbuilder.aws/learn/course/external/view/elearning/11458/aws-cloud-quest-cloud-practitioner" },
+      { id:18, titulo:"Oracle Cloud Infrastructure (OCI) Foundations",  plataforma:"Oracle MyLearn",            horas:15,  badge:"cert",   tags:["OCI","Oracle","Cloud"],                     filtros:["cloud-aws"],                                   link:"https://mylearn.oracle.com/" },
+      { id:19, titulo:"Bootcamps de DevOps & Cloud (Santander / Vivo / AWS)", plataforma:"DIO",                horas:75,  badge:"hours",  tags:["DevOps","AWS","Bootcamp"],                  filtros:["devops-linux","cloud-aws","horas-faculdade"],  link:"https://www.dio.me/bootcamps" },
+      { id:20, titulo:"Seguranca da Informacao",                         plataforma:"Fundacao Bradesco EV",      horas:30,  badge:"cert",   tags:["Seguranca","Cybersecurity","TI"],            filtros:["devops-linux","horas-faculdade"],               link:"https://www.ev.org.br/" }
+    ];
+
+    /* === RENDER === */
+    function badgeHTML(tipo) {
+      if (tipo === "cert")   return '<span class="card-badge badge-cert">&#10003; Certificado Gratuito</span>';
+      if (tipo === "credly") return '<span class="card-badge badge-credly">&#11041; Badge Credly</span>';
+      return '<span class="card-badge badge-hours">&#9830; Horas Complementares</span>';
+    }
+
+    function renderCard(c) {
+      const tags = c.tags.map(t => '<span class="tag-pill">' + t + '</span>').join('');
+      return '<div class="course-card"'
+        + ' data-filtros="' + c.filtros.join(' ') + '"'
+        + ' data-search="' + [c.titulo, c.plataforma, ...c.tags].join(' ').toLowerCase() + '">'
+        + '<div class="card-top">'
+        +   '<span class="card-platform">' + c.plataforma + '</span>'
+        +   badgeHTML(c.badge)
+        + '</div>'
+        + '<p class="card-title">' + c.titulo + '</p>'
+        + '<div class="card-meta">'
+        +   '<span class="card-hours">' + c.horas + 'h</span>'
+        +   '<div class="card-tags">' + tags + '</div>'
+        + '</div>'
+        + '<div class="card-actions">'
+        +   '<a href="' + c.link + '" target="_blank" rel="noopener noreferrer" class="btn-access">Acessar Curso &#8599;</a>'
+        +   '<button class="btn-share" onclick="compartilhar(' + c.id + ')">'
+        +     '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"/></svg>'
+        +     'WhatsApp'
+        +   '</button>'
+        + '</div>'
+        + '</div>';
+    }
+
+    function init() {
+      document.getElementById('catalogGrid').innerHTML = cursos.map(renderCard).join('');
+      document.getElementById('totalCursos').textContent = cursos.length;
+      updateCount();
+    }
+
+    /* === FILTROS + BUSCA === */
+    let filtroAtivo = 'todos';
+    let buscaAtiva  = '';
+
+    function applyFilters() {
+      const cards = document.querySelectorAll('.course-card');
+      let visible = 0;
+      cards.forEach(function(card) {
+        const matchFiltro = filtroAtivo === 'todos' || card.dataset.filtros.includes(filtroAtivo);
+        const matchBusca  = !buscaAtiva || card.dataset.search.includes(buscaAtiva);
+        const show = matchFiltro && matchBusca;
+        card.classList.toggle('hidden', !show);
+        if (show) visible++;
+      });
+      updateCount(visible);
+      document.getElementById('emptyState').classList.toggle('visible', visible === 0);
+    }
+
+    function updateCount(n) {
+      const total = (n !== undefined) ? n : cursos.length;
+      document.getElementById('resultsCount').textContent = total + ' curso' + (total !== 1 ? 's' : '');
+    }
+
+    document.querySelectorAll('.filter-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        filtroAtivo = btn.dataset.filter;
+        applyFilters();
+      });
+    });
+
+    document.getElementById('searchInput').addEventListener('input', function(e) {
+      buscaAtiva = e.target.value.toLowerCase().trim();
+      applyFilters();
+    });
+
+    /* === COMPARTILHAR === */
+    function compartilhar(id) {
+      const c = cursos.find(function(x) { return x.id === id; });
+      if (!c) return;
+      const selo = c.badge === 'credly' ? 'Badge Credly Gratuito'
+                 : c.badge === 'hours'  ? 'Horas Complementares'
+                 : 'Certificado Gratuito';
+      const msg = '*Curso:* ' + c.titulo + ' | *Plataforma:* ' + c.plataforma
+                + ' | *Carga Horaria:* ' + c.horas + ' horas (' + selo + ')'
+                + ' | *Link:* ' + c.link;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(msg).then(showToast).catch(fallbackCopy.bind(null, msg));
+      } else {
+        fallbackCopy(msg);
+      }
+    }
+
+    function fallbackCopy(msg) {
+      var ta = document.createElement('textarea');
+      ta.value = msg;
+      ta.style.cssText = 'position:fixed;opacity:0';
+      document.body.appendChild(ta);
+      ta.focus(); ta.select();
+      try { document.execCommand('copy'); } catch(e) {}
+      document.body.removeChild(ta);
+      showToast();
+    }
+
+    function showToast() {
+      var toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(function() { toast.classList.remove('show'); }, 2800);
+    }
+
+    /* === START === */
+    init();
+  </script>
+</body>
+</html>
+
