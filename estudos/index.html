@@ -88,7 +88,7 @@
     }
     .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border-subtle); }
     .highlights-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 16px; margin-bottom: 40px;
     }
     .highlight-card {
@@ -301,6 +301,18 @@
             </a>
           </div>
 
+          <!-- Card 3: Iago Ferreira TI -->
+          <div class="highlight-card">
+            <span class="highlight-badge">&#11088; Recomendacao de Ouro · Comunidade</span>
+            <h2 class="highlight-title">Iago Ferreira TI · Aprenda Cloud &amp; DevOps do Zero</h2>
+            <p class="highlight-desc">
+              Canal com conteudos e minicursos praticos focados em quem deseja aprender e migrar para Cloud e DevOps sem enrolacao, com projetos praticos de Linux, Docker, Ansible, Terraform e AWS.
+            </p>
+            <a href="https://www.youtube.com/@IagoFerreiraTI" target="_blank" rel="noopener noreferrer" class="highlight-btn">
+              Canal no YouTube &#8599;
+            </a>
+          </div>
+
         </div>
       </div>
     </section>
@@ -378,7 +390,9 @@
       { id:17, titulo:"AWS Cloud Quest: Cloud Practitioner",             plataforma:"AWS Skill Builder",         horas:20,  badge:"credly", tags:["AWS","Cloud","Practitioner"],               filtros:["credly","cloud-aws","horas-faculdade"],        link:"https://explore.skillbuilder.aws/learn/course/external/view/elearning/11458/aws-cloud-quest-cloud-practitioner" },
       { id:18, titulo:"Oracle Cloud Infrastructure (OCI) Foundations",  plataforma:"Oracle MyLearn",            horas:15,  badge:"cert",   tags:["OCI","Oracle","Cloud"],                     filtros:["cloud-aws"],                                   link:"https://mylearn.oracle.com/" },
       { id:19, titulo:"Bootcamps de DevOps & Cloud (Santander / Vivo / AWS)", plataforma:"DIO",                horas:75,  badge:"hours",  tags:["DevOps","AWS","Bootcamp"],                  filtros:["devops-linux","cloud-aws","horas-faculdade"],  link:"https://www.dio.me/bootcamps" },
-      { id:20, titulo:"Seguranca da Informacao",                         plataforma:"Fundacao Bradesco EV",      horas:30,  badge:"cert",   tags:["Seguranca","Cybersecurity","TI"],            filtros:["devops-linux","horas-faculdade"],               link:"https://www.ev.org.br/" }
+      { id:20, titulo:"Seguranca da Informacao",                         plataforma:"Fundacao Bradesco EV",      horas:30,  badge:"cert",   tags:["Seguranca","Cybersecurity","TI"],            filtros:["devops-linux","horas-faculdade"],               link:"https://www.ev.org.br/" },
+      { id: 21, titulo: "Minicursos Praticos de DevOps (Docker, Ansible, Terraform & Linux)", plataforma: "Iago Ferreira TI (Curso DevOps)", horas: 15, badge: "cert", tags: ["DevOps", "Docker", "Ansible", "Terraform", "Linux"], filtros: ["devops-linux", "cloud-aws"], link: "https://cursodevops.com.br/cursos-devops-gratuitos/" },
+      { id: 22, titulo: "Treinamento AWS do Zero Gratuito", plataforma: "Iago Ferreira TI", horas: 10, badge: "cert", tags: ["AWS", "Cloud", "Fundamentos"], filtros: ["cloud-aws"], link: "https://mautic.iagoferreirati.com.br/aws" }
     ];
 
     /* === RENDER === */
