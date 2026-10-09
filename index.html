@@ -1,685 +1,460 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lucas Robiati | DevOps & Cloud Platform Engineer</title>
-  <meta name="description" content="Portfólio de Lucas Robiati - DevOps, Cloud & Platform Engineer especializado em AWS, Terraform, Kubernetes, CI/CD DevSecOps e Observabilidade.">
+  <title>Lucas Robiati | DevOps & Cloud Infrastructure</title>
+  <meta name="description" content="Lucas Robiati — especialista em automação de infraestrutura AWS, IaC com Terraform, Kubernetes e esteiras DevSecOps.">
   <meta name="author" content="Lucas Robiati">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-  <!-- Open Graph / WhatsApp / LinkedIn / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://casiati.github.io/">
-  <meta property="og:title" content="Lucas Robiati | DevOps & Cloud Platform Engineer">
-  <meta property="og:description" content="Portfólio de Lucas Robiati - DevOps, Cloud & Platform Engineer especializado em AWS, Terraform, Kubernetes, CI/CD DevSecOps e Observabilidade.">
+  <meta property="og:title" content="Lucas Robiati | DevOps & Cloud Infrastructure">
+  <meta property="og:description" content="Lucas Robiati — especialista em automação de infraestrutura AWS, IaC com Terraform, Kubernetes e esteiras DevSecOps.">
   <meta property="og:image" content="https://casiati.github.io/assets/preview.png">
-  <meta property="og:image:url" content="https://casiati.github.io/assets/preview.png">
-  <meta property="og:image:secure_url" content="https://casiati.github.io/assets/preview.png">
-  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Lucas Robiati - DevOps & Cloud Platform Engineer">
   <meta property="og:site_name" content="Lucas Robiati">
-
-  <!-- Fallbacks específicos para crawlers legados e WhatsApp Web -->
-  <link rel="image_src" href="https://casiati.github.io/assets/preview.png">
-  <meta itemprop="image" content="https://casiati.github.io/assets/preview.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://casiati.github.io/">
-  <meta name="twitter:title" content="Lucas Robiati | DevOps & Cloud Platform Engineer">
-  <meta name="twitter:description" content="Portfólio de Lucas Robiati - DevOps, Cloud & Platform Engineer especializado em AWS, Terraform, Kubernetes, CI/CD DevSecOps e Observabilidade.">
+  <meta name="twitter:title" content="Lucas Robiati | DevOps & Cloud Infrastructure">
+  <meta name="twitter:description" content="Lucas Robiati — especialista em automação de infraestrutura AWS, IaC com Terraform, Kubernetes e esteiras DevSecOps.">
   <meta name="twitter:image" content="https://casiati.github.io/assets/preview.png">
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            outfit: ['Outfit', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-          colors: {
-            slate: {
-              950: '#030712',
-              900: '#0b1329',
-              850: '#0f172a',
-              800: '#1e293b',
-            },
-            cyan: {
-              400: '#38bdf8',
-              500: '#0284c7',
-            }
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Google Fonts & Font Awesome -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/terminal.css">
 </head>
-<body class="bg-slate-950 text-slate-100 font-outfit antialiased selection:bg-cyan-500 selection:text-slate-950 overflow-x-hidden min-h-screen">
+<body>
 
-  <!-- Glow Elements -->
-  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-    <div class="glow-orb orb-1"></div>
-    <div class="glow-orb orb-2"></div>
-    <div class="glow-orb orb-3"></div>
-    <div class="grid-pattern"></div>
-  </div>
-
-  <!-- Navbar -->
-  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="#hero" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center font-mono font-bold text-white shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
-          LR
-        </div>
-        <div class="flex flex-col">
-          <span class="font-bold tracking-tight text-white group-hover:text-cyan-400 transition-colors">Lucas Robiati</span>
-          <span class="text-xs font-mono text-cyan-400/90">DevOps & Cloud</span>
-        </div>
+  <!-- ═══════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════ -->
+  <header class="nav-header" id="navHeader">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-mark">LR</span>
+        <span class="logo-text">Lucas Robiati</span>
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300">
-        <a href="#sobre" class="hover:text-cyan-400 transition-colors">Sobre</a>
-        <a href="#certificacoes" class="hover:text-cyan-400 transition-colors">Certificações</a>
-        <a href="#stack" class="hover:text-cyan-400 transition-colors">Stack & Cloud</a>
-        <a href="#projetos" class="hover:text-cyan-400 transition-colors">Projetos</a>
-        <a href="#terminal" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5 text-cyan-400 font-mono">
-          <i class="fa-solid fa-terminal text-xs"></i> Terminal
-        </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#pilares" class="nav-link">Pilares</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#certificacoes" class="nav-link">Certificações</a>
+        <a href="#contato" class="nav-link">Contato</a>
       </nav>
 
-      <!-- Status & CTA -->
-      <div class="hidden lg:flex items-center gap-4">
-        <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono">
-          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-          <span>Cloud & Platform Ops</span>
-        </div>
-        <a href="https://www.linkedin.com/in/lucas-robiati-129795133/" target="_blank" rel="noopener noreferrer" class="btn-primary">
-          <i class="fa-brands fa-linkedin text-base"></i>
-          <span>LinkedIn</span>
-        </a>
+      <div class="nav-actions">
+        <span class="status-badge">
+          <span class="status-dot"></span>
+          <span class="mono">Disponível</span>
+        </span>
+        <a href="https://www.linkedin.com/in/lucas-robiati-129795133/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">LinkedIn</a>
       </div>
 
-      <!-- Mobile Menu Button -->
-      <button id="mobileMenuBtn" class="md:hidden text-slate-300 hover:text-white p-2 text-xl" aria-label="Abrir menu">
-        <i class="fa-solid fa-bars"></i>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
     </div>
 
-    <!-- Mobile Nav Dropdown -->
-    <div id="mobileMenu" class="hidden md:hidden border-b border-slate-800 bg-slate-950/95 px-6 py-5 flex flex-col gap-4 font-medium">
-      <a href="#sobre" class="mobile-link">Sobre</a>
-      <a href="#certificacoes" class="mobile-link">Certificações</a>
-      <a href="#stack" class="mobile-link">Stack & Cloud</a>
-      <a href="#projetos" class="mobile-link">Projetos</a>
-      <a href="#terminal" class="mobile-link text-cyan-400 font-mono"><i class="fa-solid fa-terminal mr-2"></i>Terminal Interativo</a>
-      <div class="pt-2 flex flex-col gap-3">
-        <a href="https://www.linkedin.com/in/lucas-robiati-129795133/" target="_blank" class="btn-primary w-full justify-center">
-          <i class="fa-brands fa-linkedin"></i> Conectar no LinkedIn
-        </a>
-      </div>
+    <!-- Mobile dropdown -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="#pilares" class="mobile-nav-link">Pilares de Engenharia</a>
+      <a href="#projetos" class="mobile-nav-link">Projetos</a>
+      <a href="#certificacoes" class="mobile-nav-link">Certificações</a>
+      <a href="#contato" class="mobile-nav-link">Contato</a>
+      <a href="https://www.linkedin.com/in/lucas-robiati-129795133/" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full mt-4">LinkedIn</a>
     </div>
   </header>
 
-  <main class="relative z-10 pt-20">
+  <main>
 
-    <!-- HERO SECTION -->
-    <section id="hero" class="min-h-[calc(100vh-5rem)] flex items-center py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
-        <div class="lg:col-span-7 flex flex-col gap-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/70 border border-cyan-500/30 text-cyan-300 text-xs font-mono w-fit">
-            <i class="fa-solid fa-cloud text-cyan-400"></i>
-            <span>DevOps | Cloud | Platform Engineering</span>
-          </div>
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
 
-          <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
-            Construindo infraestrutura <span class="gradient-text">resiliente, escalável</span> e automatizada.
-          </h1>
-
-          <p class="text-lg sm:text-xl text-slate-300 max-w-2xl font-light leading-relaxed">
-            Olá, sou <strong>Lucas Robiati</strong>. Especialista em automação de infraestrutura em nuvem, esteiras <strong>CI/CD DevSecOps</strong>, <strong>Terraform</strong>, <strong>Kubernetes</strong> e arquiteturas <strong>AWS</strong>.
+        <!-- Left: identity -->
+        <div class="hero-content">
+          <p class="eyebrow mono">DevOps · Cloud Infrastructure · DevSecOps</p>
+          <h1 class="hero-title">Lucas Robiati</h1>
+          <p class="hero-sub">
+            Especialista em automação de infraestrutura AWS, IaC com Terraform, orquestração Kubernetes e esteiras CI/CD DevSecOps.
           </p>
 
-          <!-- Badges & Highlights -->
-          <div class="flex flex-wrap gap-2.5 pt-2">
-            <span class="tag-badge"><i class="fa-brands fa-aws text-amber-400"></i> AWS SAA Associate</span>
-            <span class="tag-badge"><i class="fa-solid fa-cubes text-cyan-400"></i> Terraform / IaC</span>
-            <span class="tag-badge"><i class="fa-brands fa-docker text-blue-400"></i> Docker & K8s</span>
-            <span class="tag-badge"><i class="fa-solid fa-shield-halved text-emerald-400"></i> DevSecOps</span>
+          <div class="hero-tags">
+            <span class="tag mono">AWS SAA-C03</span>
+            <span class="tag mono">Terraform</span>
+            <span class="tag mono">Kubernetes</span>
+            <span class="tag mono">DevSecOps</span>
+            <span class="tag mono">GitHub Actions</span>
           </div>
 
-          <!-- Action Buttons -->
-          <div class="flex flex-wrap items-center gap-4 pt-4">
-            <a href="#projetos" class="btn-primary">
-              <span>Explorar Projetos</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a href="#terminal" class="btn-secondary">
-              <i class="fa-solid fa-terminal text-cyan-400"></i>
-              <span>Abrir Terminal</span>
-            </a>
-            <a href="https://github.com/Casiati" target="_blank" rel="noopener noreferrer" class="btn-icon" title="Ver GitHub">
-              <i class="fa-brands fa-github text-xl"></i>
-            </a>
+          <div class="hero-cta">
+            <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+            <a href="https://github.com/Casiati" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub →</a>
           </div>
         </div>
 
-        <!-- Hero Architecture Card Widget -->
-        <div class="lg:col-span-5 flex justify-center">
-          <div class="glass-card w-full max-w-md p-6 relative overflow-hidden border-cyan-500/20 shadow-2xl shadow-cyan-950/50">
-            <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-4">
-              <div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
-                <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
-                <span class="text-xs font-mono text-slate-400 ml-2">cloud_architecture.tf</span>
+        <!-- Right: infra spec card -->
+        <div class="hero-spec">
+          <div class="spec-card">
+            <div class="spec-header">
+              <div class="spec-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
               </div>
-              <span class="text-xs font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Synced</span>
+              <span class="mono spec-filename">infra-spec.tf</span>
+              <span class="spec-badge mono">● synced</span>
             </div>
+            <pre class="spec-body mono"><span class="tf-kw">module</span> <span class="tf-str">"platform"</span> {
+  source   = <span class="tf-str">"./aws-platform"</span>
 
-            <div class="font-mono text-xs text-slate-300 space-y-2 leading-relaxed">
-              <p><span class="text-purple-400">module</span> <span class="text-emerald-400">"infrastructure"</span> {</p>
-              <p class="pl-4"><span class="text-cyan-400">source</span>   = <span class="text-amber-300">"./modules/aws-platform"</span></p>
-              <p class="pl-4"><span class="text-cyan-400">cloud</span>    = <span class="text-amber-300">"AWS"</span></p>
-              <p class="pl-4"><span class="text-cyan-400">iac</span>      = <span class="text-amber-300">"Terraform"</span></p>
-              <p class="pl-4"><span class="text-cyan-400">cluster</span>  = <span class="text-amber-300">"Kubernetes (EKS)"</span></p>
-              <p class="pl-4"><span class="text-cyan-400">pipeline</span> = <span class="text-amber-300">"GitHub Actions CI/CD"</span></p>
-              <p class="pl-4"><span class="text-cyan-400">security</span> = [<span class="text-amber-300">"Trivy"</span>, <span class="text-amber-300">"Gitleaks"</span>]</p>
-              <p>}</p>
-            </div>
+  <span class="tf-key">cloud</span>    = <span class="tf-val">"AWS"</span>
+  <span class="tf-key">regions</span>  = [<span class="tf-val">"us-east-1"</span>, <span class="tf-val">"sa-east-1"</span>]
+  <span class="tf-key">topology</span> = <span class="tf-val">"multi-az"</span>
 
-            <div class="mt-6 pt-4 border-t border-slate-800 grid grid-cols-2 gap-3 text-center">
-              <div class="p-3 rounded-lg bg-slate-900/60 border border-slate-800">
-                <span class="text-xl font-bold text-white font-mono">100%</span>
-                <p class="text-xs text-slate-400">IaC Determinístico</p>
+  <span class="tf-key">iac</span>      = <span class="tf-val">"Terraform"</span>
+  <span class="tf-key">cluster</span>  = <span class="tf-val">"EKS + Helm"</span>
+  <span class="tf-key">pipeline</span> = <span class="tf-val">"GitHub Actions OIDC"</span>
+  <span class="tf-key">security</span> = [<span class="tf-val">"Trivy"</span>, <span class="tf-val">"Gitleaks"</span>]
+  <span class="tf-key">observ</span>   = [<span class="tf-val">"Prometheus"</span>, <span class="tf-val">"Grafana"</span>]
+}</pre>
+            <div class="spec-metrics">
+              <div class="metric">
+                <span class="metric-val mono">100%</span>
+                <span class="metric-label">IaC Determinístico</span>
               </div>
-              <div class="p-3 rounded-lg bg-slate-900/60 border border-slate-800">
-                <span class="text-xl font-bold text-emerald-400 font-mono">Zero-Downtime</span>
-                <p class="text-xs text-slate-400">Deploy Contínuo</p>
+              <div class="metric">
+                <span class="metric-val mono status-green">Zero-Downtime</span>
+                <span class="metric-label">Deploy Contínuo</span>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOBRE MIM SECTION -->
-    <section id="sobre" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/60">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="section-tag">Perfil & Trajetória</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Sobre Mim</h2>
-        <p class="text-slate-400 mt-4 text-base sm:text-lg">
-          Transformando código em serviços de alta disponibilidade com automação, segurança e previsibilidade.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-        <div class="lg:col-span-2 glass-card p-8 flex flex-col gap-6">
-          <p class="text-slate-300 leading-relaxed text-base sm:text-lg">
-            Profissional focado em <strong>DevOps, Cloud e Automação de Infraestrutura</strong>, graduando em <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong>. Com base sólida em desenvolvimento de software e arquitetura limpa, atuo desenhando e mantendo ambientes resilientes, escaláveis e seguros.
-          </p>
-          <p class="text-slate-300 leading-relaxed text-base sm:text-lg">
-            Possuo experiência na criação de pipelines <strong>CI/CD com DevSecOps</strong> (verificações de vulnerabilidade e credenciais), provisionamento com <strong>Terraform</strong> em AWS, orquestração com <strong>Docker & Kubernetes</strong> e monitoramento proativo com métricas e observabilidade.
-          </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800">
-            <div class="flex items-center gap-3">
-              <i class="fa-solid fa-graduation-cap text-cyan-400 text-xl"></i>
-              <div>
-                <span class="text-xs text-slate-400 block">Formação</span>
-                <span class="text-sm font-semibold text-white">Análise e Desenv. de Sistemas</span>
-              </div>
-            </div>
-            <div class="flex items-center gap-3">
-              <i class="fa-solid fa-location-dot text-cyan-400 text-xl"></i>
-              <div>
-                <span class="text-xs text-slate-400 block">Localização</span>
-                <span class="text-sm font-semibold text-white">Taquaritinga, SP — Brasil</span>
+              <div class="metric">
+                <span class="metric-val mono">Multi-AZ</span>
+                <span class="metric-label">Alta Disponibilidade</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Pilares -->
-        <div class="space-y-4">
-          <div class="feature-card">
-            <div class="feature-icon bg-cyan-500/10 text-cyan-400"><i class="fa-solid fa-cloud"></i></div>
-            <div>
-              <h3 class="font-bold text-white text-base">Cloud & Infra as Code</h3>
-              <p class="text-xs text-slate-400 mt-1">AWS modular provisionada determinísticamente com Terraform.</p>
-            </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PILARES DE ENGENHARIA
+    ═══════════════════════════════════════════ -->
+    <section id="pilares" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow mono">Topologia de Competências</p>
+          <h2 class="section-title">Pilares de Engenharia</h2>
+          <p class="section-sub">Conhecimento organizado em três domínios de sistemas de alta confiabilidade.</p>
+        </div>
+
+        <div class="pillars-grid">
+
+          <!-- Pilar 01 -->
+          <div class="pillar-card">
+            <div class="pillar-num mono">01</div>
+            <h3 class="pillar-title">Cloud Platform & IaC</h3>
+            <p class="pillar-desc">Infraestrutura AWS provisionada de forma modular e determinística, com isolamento de rede e controle de acesso por menor privilégio.</p>
+            <ul class="pillar-list">
+              <li class="pillar-item">
+                <span class="item-label mono">AWS Multi-AZ</span>
+                <span class="item-desc">EC2, RDS, EKS, VPC, ALB, S3</span>
+              </li>
+              <li class="pillar-item">
+                <span class="item-label mono">Terraform</span>
+                <span class="item-desc">Módulos, Remote State, Workspaces, OpenTofu</span>
+              </li>
+              <li class="pillar-item">
+                <span class="item-label mono">IAM Least-Privilege</span>
+                <span class="item-desc">Políticas granulares, roles por workload</span>
+              </li>
+              <li class="pillar-item">
+                <span class="item-label mono">Networking</span>
+                <span class="item-desc">VPC privada, NAT Gateway, Cloudflare WAF/DNS</span>
+              </li>
+            </ul>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon bg-blue-500/10 text-blue-400"><i class="fa-brands fa-docker"></i></div>
-            <div>
-              <h3 class="font-bold text-white text-base">Containers & Kubernetes</h3>
-              <p class="text-xs text-slate-400 mt-1">Docker multi-stage, orquestração K8s, Pods, Services e Ingress.</p>
-            </div>
+
+          <!-- Pilar 02 -->
+          <div class="pillar-card">
+            <div class="pillar-num mono">02</div>
+            <h3 class="pillar-title">CI/CD & DevSecOps</h3>
+            <p class="pillar-desc">Esteiras de entrega contínua com segurança embutida desde o commit — sem chaves estáticas, com auditoria automatizada em cada stage.</p>
+            <ul class="pillar-list">
+              <li class="pillar-item">
+                <span class="item-label mono">GitHub Actions</span>
+                <span class="item-desc">OIDC sem chaves estáticas, reusable workflows</span>
+              </li>
+              <li class="pillar-item">
+                <span class="item-label mono">Trivy + Gitleaks</span>
+                <span class="item-desc">Scan de vulnerabilidades e detecção de secrets</span>
+              </li>
+              <li class="pillar-item">
+                <span class="item-label mono">SonarQube</span>
+                <span class="item-desc">Análise estática de qualidade de código</span>
+              </li>
+              <li class="pillar-item">
+                <span class="item-label mono">Docker Multi-stage</span>
+                <span class="item-desc">Builds otimizados, imagens mínimas de produção</span>
+              </li>
+            </ul>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon bg-emerald-500/10 text-emerald-400"><i class="fa-solid fa-shield-halved"></i></div>
-            <div>
-              <h3 class="font-bold text-white text-base">DevSecOps & CI/CD</h3>
-              <p class="text-xs text-slate-400 mt-1">Pipelines com GitHub Actions, scans Trivy, Gitleaks e SonarQube.</p>
-            </div>
+
+          <!-- Pilar 03 -->
+          <div class="pillar-card">
+            <div class="pillar-num mono">03</div>
+            <h3 class="pillar-title">Observabilidade & SRE</h3>
+            <p class="pillar-desc">Stack de monitoramento que traduz telemetria em decisões operacionais — métricas, logs e alertas centralizados em Kubernetes.</p>
+            <ul class="pillar-list">
+              <li class="pillar-item">
+                <span class="item-label mono">Prometheus</span>
+                <span class="item-desc">Coleta de métricas e alertas de SLO/SLA</span>
+              </li>
+              <li class="pillar-item">
+                <span class="item-label mono">Grafana + Loki</span>
+                <span class="item-desc">Dashboards de telemetria e logs centralizados</span>
+              </li>
+              <li class="pillar-item">
+                <span class="item-label mono">Kubernetes / Helm</span>
+                <span class="item-desc">Pods, HPA, Ingress, ArgoCD GitOps</span>
+              </li>
+              <li class="pillar-item">
+                <span class="item-label mono">Datadog</span>
+                <span class="item-desc">APM e rastreamento distribuído</span>
+              </li>
+            </ul>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- CERTIFICAÇÕES SECTION -->
-    <section id="certificacoes" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/60">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="section-tag">Conhecimento Validado</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Certificações & Especializações</h2>
-        <p class="text-slate-400 mt-4 text-base sm:text-lg">
-          Qualificações oficiais e formações práticas em Cloud, Kubernetes, CI/CD e IA.
+    <!-- ═══════════════════════════════════════════
+         PROJETOS — ESTUDOS DE ARQUITETURA
+    ═══════════════════════════════════════════ -->
+    <section id="projetos" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow mono">Portfólio Prático</p>
+          <h2 class="section-title">Estudos de Arquitetura</h2>
+          <p class="section-sub">Projetos reais com problema definido, solução arquitetural e código aberto.</p>
+        </div>
+
+        <!-- Filter -->
+        <div class="filter-bar" role="group" aria-label="Filtrar projetos">
+          <button class="filter-btn active mono" data-filter="all">Todos</button>
+          <button class="filter-btn mono" data-filter="devops">CI/CD & DevSecOps</button>
+          <button class="filter-btn mono" data-filter="iac">Cloud & IaC</button>
+          <button class="filter-btn mono" data-filter="mobile">Mobile</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- Project 1: DevSecOps Pipeline -->
+          <article class="project-card" data-category="devops">
+            <div class="project-meta">
+              <div class="project-tags">
+                <span class="tag mono">DevSecOps</span>
+                <span class="tag mono">GitHub Actions</span>
+              </div>
+              <a href="https://github.com/Casiati/devsecops-ci-cd-pipeline" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver no GitHub">↗</a>
+            </div>
+            <h3 class="project-title">Enterprise DevSecOps CI/CD Pipeline</h3>
+            <div class="project-spec">
+              <div class="spec-row">
+                <span class="spec-key mono">Problema</span>
+                <span class="spec-val">Ausência de segurança na esteira de entrega — vulnerabilidades chegavam a produção sem auditoria.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key mono">Solução</span>
+                <span class="spec-val">Pipeline com GitHub Actions integrando Trivy, Gitleaks e SonarQube em cada PR, antes do merge.</span>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tag mono">GitHub Actions</span>
+              <span class="tag mono">Docker</span>
+              <span class="tag mono">Trivy</span>
+              <span class="tag mono">Gitleaks</span>
+              <span class="tag mono">SonarQube</span>
+            </div>
+            <a href="https://github.com/Casiati/devsecops-ci-cd-pipeline" target="_blank" rel="noopener noreferrer" class="project-cta mono">Ver repositório →</a>
+          </article>
+
+          <!-- Project 2: Terraform AWS -->
+          <article class="project-card" data-category="iac">
+            <div class="project-meta">
+              <div class="project-tags">
+                <span class="tag mono">AWS Cloud</span>
+                <span class="tag mono">Terraform</span>
+              </div>
+              <a href="https://github.com/Casiati/terraform-aws-hands-on" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver no GitHub">↗</a>
+            </div>
+            <h3 class="project-title">Modular AWS Infrastructure with Terraform</h3>
+            <div class="project-spec">
+              <div class="spec-row">
+                <span class="spec-key mono">Problema</span>
+                <span class="spec-val">Infraestrutura provisionada manualmente, sem rastreabilidade nem reprodutibilidade entre ambientes.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key mono">Solução</span>
+                <span class="spec-val">Arquitetura Multi-AZ modular em Terraform: VPC privada, EC2, RDS, IAM Least-Privilege e S3 com remote state.</span>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tag mono">Terraform</span>
+              <span class="tag mono">AWS VPC</span>
+              <span class="tag mono">EC2</span>
+              <span class="tag mono">RDS</span>
+              <span class="tag mono">IAM & S3</span>
+            </div>
+            <a href="https://github.com/Casiati/terraform-aws-hands-on" target="_blank" rel="noopener noreferrer" class="project-cta mono">Ver repositório →</a>
+          </article>
+
+          <!-- Project 3: Nubank Clone -->
+          <article class="project-card" data-category="mobile">
+            <div class="project-meta">
+              <div class="project-tags">
+                <span class="tag mono">Flutter / Dart</span>
+                <span class="tag mono">Clean Architecture</span>
+              </div>
+              <a href="https://github.com/Casiati/nubank_clone" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver no GitHub">↗</a>
+            </div>
+            <h3 class="project-title">Nubank Clone — Clean Architecture</h3>
+            <div class="project-spec">
+              <div class="spec-row">
+                <span class="spec-key mono">Problema</span>
+                <span class="spec-val">Aplicação monolítica com alto acoplamento entre camadas de UI, estado e regras de negócio.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key mono">Solução</span>
+                <span class="spec-val">Refatoração completa em Flutter/Dart com widgets modulares, ChangeNotifier isolado e cobertura total de testes unitários e de widget.</span>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tag mono">Flutter</span>
+              <span class="tag mono">Dart</span>
+              <span class="tag mono">State Management</span>
+              <span class="tag mono">Unit Tests</span>
+            </div>
+            <a href="https://github.com/Casiati/nubank_clone" target="_blank" rel="noopener noreferrer" class="project-cta mono">Ver repositório →</a>
+          </article>
+
+          <!-- Project 4: AWS Implementation Report -->
+          <article class="project-card" data-category="iac">
+            <div class="project-meta">
+              <div class="project-tags">
+                <span class="tag mono">Cloud Migration</span>
+                <span class="tag mono">AWS Architecture</span>
+              </div>
+              <a href="https://github.com/Casiati/RELAT-RIO_IMPLEMENTA-O_AWS" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver no GitHub">↗</a>
+            </div>
+            <h3 class="project-title">Relatório de Arquitetura & Implementação AWS</h3>
+            <div class="project-spec">
+              <div class="spec-row">
+                <span class="spec-key mono">Problema</span>
+                <span class="spec-val">Serviços corporativos on-premise com alta latência, custo operacional elevado e sem tolerância a falhas.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key mono">Solução</span>
+                <span class="spec-val">Estudo de caso completo de migração para AWS: análise de custo, arquitetura Well-Architected, redundância Multi-AZ e otimização de SLA.</span>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tag mono">AWS Cloud</span>
+              <span class="tag mono">Well-Architected</span>
+              <span class="tag mono">Cost Optimization</span>
+            </div>
+            <a href="https://github.com/Casiati/RELAT-RIO_IMPLEMENTA-O_AWS" target="_blank" rel="noopener noreferrer" class="project-cta mono">Ver repositório →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CERTIFICAÇÕES
+    ═══════════════════════════════════════════ -->
+    <section id="certificacoes" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow mono">Conhecimento Validado</p>
+          <h2 class="section-title">Certificações</h2>
+          <p class="section-sub">Qualificações oficiais AWS e formações técnicas aplicadas.</p>
+        </div>
+
+        <div class="certs-grid">
+
+          <!-- AWS SAA — destaque primário -->
+          <div class="cert-card cert-primary">
+            <div class="cert-provider mono">AWS Certified · Associate</div>
+            <h3 class="cert-title">Solutions Architect<br>Associate <span class="mono cert-code">SAA-C03</span></h3>
+            <p class="cert-desc">Desenho e implementação de sistemas distribuídos na AWS: alta disponibilidade, tolerância a falhas, segurança com IAM/VPC e otimização de custos.</p>
+            <div class="cert-tags">
+              <span class="tag mono">VPC</span>
+              <span class="tag mono">IAM</span>
+              <span class="tag mono">EC2</span>
+              <span class="tag mono">RDS</span>
+              <span class="tag mono">EKS</span>
+            </div>
+          </div>
+
+          <!-- AWS Cloud Practitioner -->
+          <div class="cert-card">
+            <div class="cert-provider mono">AWS Certified · Foundational</div>
+            <h3 class="cert-title">Cloud Practitioner <span class="mono cert-code">CLF-C02</span></h3>
+            <p class="cert-desc">Fundamentos de computação em nuvem AWS, modelo de responsabilidade compartilhada, arquitetura global e precificação.</p>
+          </div>
+
+          <!-- Kubernetes & Docker DIO -->
+          <div class="cert-card">
+            <div class="cert-provider mono">DIO · Containers & K8s</div>
+            <h3 class="cert-title">Orquestração com Kubernetes & Docker</h3>
+            <p class="cert-desc">Imagens Docker otimizadas, Pods, Deployments, Services, volumes persistentes e administração de clusters Kubernetes em nuvem.</p>
+          </div>
+
+          <!-- GitHub Actions DIO -->
+          <div class="cert-card">
+            <div class="cert-provider mono">DIO · CI/CD & GitOps</div>
+            <h3 class="cert-title">GitHub Certification & Actions</h3>
+            <p class="cert-desc">Automação de esteiras CI/CD completas com GitHub Actions, GitHub Projects, Codespaces e governança de repositórios.</p>
+          </div>
+
+          <!-- ChatGPT for Devs DIO -->
+          <div class="cert-card">
+            <div class="cert-provider mono">DIO · AI Engineering</div>
+            <h3 class="cert-title">ChatGPT for Devs & AI Assist</h3>
+            <p class="cert-desc">Engenharia de prompts técnicos, ferramentas de IA/Copilot aplicadas à refatoração de código e automação de rotinas de engenharia.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CONTATO
+    ═══════════════════════════════════════════ -->
+    <section id="contato" class="section contact-section">
+      <div class="container contact-inner">
+        <p class="eyebrow mono">Networking & Conexões</p>
+        <h2 class="contact-title">Vamos conversar sobre<br>Cloud & DevOps?</h2>
+        <p class="contact-sub">
+          Aberto a trocar experiências sobre arquiteturas em nuvem, automações e boas práticas no ecossistema de plataforma.
         </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- AWS SAA Card -->
-        <div class="cert-card border-amber-500/30">
-          <div class="cert-badge bg-amber-500/10 text-amber-400 border border-amber-500/30">
-            <i class="fa-brands fa-aws text-2xl"></i>
-          </div>
-          <div class="flex-1">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold">AWS Certified</span>
-              <span class="text-xs text-slate-400">Associate Level</span>
-            </div>
-            <h3 class="text-lg font-bold text-white mt-1">Solutions Architect – Associate</h3>
-            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-              Desenho e implementação de sistemas distribuídos na AWS: alta disponibilidade, tolerância a falhas, segurança (IAM/VPC) e otimização de custos.
-            </p>
-          </div>
-        </div>
-
-        <!-- Kubernetes & Docker Card -->
-        <div class="cert-card border-cyan-500/30">
-          <div class="cert-badge bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
-            <i class="fa-solid fa-dharmachakra text-2xl"></i>
-          </div>
-          <div class="flex-1">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-bold">Formação DIO</span>
-              <span class="text-xs text-slate-400">Containers & K8s</span>
-            </div>
-            <h3 class="text-lg font-bold text-white mt-1">Orquestração com Kubernetes & Docker</h3>
-            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-              Criação de imagens Docker otimizadas, gerenciamento de Pods, Deployments, Services, volumes persistentes e administração de clusters Kubernetes em nuvem.
-            </p>
-          </div>
-        </div>
-
-        <!-- GitHub Certification Card -->
-        <div class="cert-card border-purple-500/30">
-          <div class="cert-badge bg-purple-500/10 text-purple-400 border border-purple-500/30">
-            <i class="fa-brands fa-github text-2xl"></i>
-          </div>
-          <div class="flex-1">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono uppercase tracking-wider text-purple-400 font-bold">Formação DIO</span>
-              <span class="text-xs text-slate-400">CI/CD & GitOps</span>
-            </div>
-            <h3 class="text-lg font-bold text-white mt-1">GitHub Certification & Actions</h3>
-            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-              Controle avançado de versão, automação de esteiras CI/CD completas com GitHub Actions, GitHub Projects, Codespaces e governança de repositórios.
-            </p>
-          </div>
-        </div>
-
-        <!-- AWS Cloud Practitioner Card -->
-        <div class="cert-card border-amber-500/20">
-          <div class="cert-badge bg-amber-500/10 text-amber-300 border border-amber-500/20">
-            <i class="fa-solid fa-cloud text-2xl"></i>
-          </div>
-          <div class="flex-1">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono uppercase tracking-wider text-amber-300 font-bold">Formação DIO / AWS</span>
-              <span class="text-xs text-slate-400">Cloud Foundational</span>
-            </div>
-            <h3 class="text-lg font-bold text-white mt-1">AWS Cloud Practitioner</h3>
-            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-              Fundamentos de computação em nuvem AWS, modelo de responsabilidade compartilhada, arquitetura global e precificação.
-            </p>
-          </div>
-        </div>
-
-        <!-- ChatGPT for Devs Card -->
-        <div class="cert-card border-emerald-500/30">
-          <div class="cert-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-            <i class="fa-solid fa-robot text-2xl"></i>
-          </div>
-          <div class="flex-1">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold">Formação DIO</span>
-              <span class="text-xs text-slate-400">AI Engineering</span>
-            </div>
-            <h3 class="text-lg font-bold text-white mt-1">ChatGPT for Devs & AI Assist</h3>
-            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
-              Engenharia de prompts técnicos, ferramentas de IA/Copilot aplicadas à refatoração de código, automação de tarefas e otimização de rotinas de engenharia.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- TECH STACK & CLOUD SECTION -->
-    <section id="stack" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/60">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="section-tag">Ecossistema & Ferramentas</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Tech Stack & Habilidades</h2>
-        <p class="text-slate-400 mt-4 text-base sm:text-lg">
-          Ferramentas e tecnologias aplicadas diariamente para criar infraestrutura moderna e esteiras de entrega.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- Cloud & Edge -->
-        <div class="tech-category-card">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2.5 rounded-lg bg-amber-500/10 text-amber-400"><i class="fa-brands fa-aws text-xl"></i></div>
-            <h3 class="font-bold text-white text-lg">Cloud Infrastructure</h3>
-          </div>
-          <ul class="space-y-2.5 text-sm text-slate-300">
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> AWS (EC2, S3, RDS, VPC, IAM, EKS)</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> CloudWatch & Route53</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> Cloudflare (DNS, WAF, SSL)</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> Arquiteturas Multi-AZ e Alta Disponibilidade</li>
-          </ul>
-        </div>
-
-        <!-- IaC & Config -->
-        <div class="tech-category-card">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2.5 rounded-lg bg-purple-500/10 text-purple-400"><i class="fa-solid fa-cube text-xl"></i></div>
-            <h3 class="font-bold text-white text-lg">Infraestrutura como Código</h3>
-          </div>
-          <ul class="space-y-2.5 text-sm text-slate-300">
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> Terraform (Módulos, Remote State, Workspaces)</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> OpenTofu</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> Ansible (Automação de configuração)</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> GitOps & Versionamento de Infra</li>
-          </ul>
-        </div>
-
-        <!-- Containers & K8s -->
-        <div class="tech-category-card">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2.5 rounded-lg bg-blue-500/10 text-blue-400"><i class="fa-brands fa-docker text-xl"></i></div>
-            <h3 class="font-bold text-white text-lg">Containers & Orquestração</h3>
-          </div>
-          <ul class="space-y-2.5 text-sm text-slate-300">
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> Docker & Docker Compose</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> Builds Multi-Stage & Otimização de Imagens</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> Kubernetes (Pods, Services, Ingress, HPA)</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> Helm Charts & ArgoCD</li>
-          </ul>
-        </div>
-
-        <!-- CI/CD & DevSecOps -->
-        <div class="tech-category-card">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2.5 rounded-lg bg-emerald-500/10 text-emerald-400"><i class="fa-solid fa-shield-halved text-xl"></i></div>
-            <h3 class="font-bold text-white text-lg">CI/CD & DevSecOps</h3>
-          </div>
-          <ul class="space-y-2.5 text-sm text-slate-300">
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> GitHub Actions (Workflows, Reusable Actions)</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> GitLab CI</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> Trivy (Vulnerabilidades em containers)</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> Gitleaks (Detecção de Secrets) & SonarQube</li>
-          </ul>
-        </div>
-
-        <!-- Observabilidade -->
-        <div class="tech-category-card">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2.5 rounded-lg bg-pink-500/10 text-pink-400"><i class="fa-solid fa-chart-line text-xl"></i></div>
-            <h3 class="font-bold text-white text-lg">Observabilidade & SRE</h3>
-          </div>
-          <ul class="space-y-2.5 text-sm text-slate-300">
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> Prometheus (Coleta de métricas e alertas)</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> Grafana (Dashboards de telemetria)</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> Datadog</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> Tracing e Logs Centralizados</li>
-          </ul>
-        </div>
-
-        <!-- Scripting & Dev -->
-        <div class="tech-category-card">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2.5 rounded-lg bg-cyan-500/10 text-cyan-400"><i class="fa-solid fa-code text-xl"></i></div>
-            <h3 class="font-bold text-white text-lg">Linguagens & Scripting</h3>
-          </div>
-          <ul class="space-y-2.5 text-sm text-slate-300">
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> Bash / Shell Scripting (Automação de SO)</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> Python (Automação e Scripts)</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> Dart & Flutter (Mobile & UI Clean Architecture)</li>
-            <li class="tech-item"><i class="fa-solid fa-check text-cyan-400"></i> SQL & Modelagem de Dados</li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- PROJETOS EM DESTAQUE SECTION -->
-    <section id="projetos" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/60">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-        <div>
-          <span class="section-tag">Portfólio Prático</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Projetos em Destaque</h2>
-          <p class="text-slate-400 mt-2">Infraestrutura, automação de segurança, pipelines e aplicações reais.</p>
-        </div>
-
-        <!-- Filter Tabs -->
-        <div class="flex flex-wrap gap-2 font-mono text-xs">
-          <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="devops">DevSecOps / CI-CD</button>
-          <button class="filter-btn" data-filter="iac">Cloud / IaC</button>
-          <button class="filter-btn" data-filter="mobile">Mobile / Clean Code</button>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="projectsGrid">
-
-        <!-- Project 1: DevSecOps CI/CD Pipeline -->
-        <div class="project-card" data-category="devops">
-          <div class="project-header">
-            <div class="flex items-center gap-2">
-              <span class="tag-pill bg-emerald-500/10 text-emerald-400 border-emerald-500/30">DevSecOps</span>
-              <span class="tag-pill bg-blue-500/10 text-blue-400 border-blue-500/30">GitHub Actions</span>
-            </div>
-            <a href="https://github.com/Casiati/devsecops-ci-cd-pipeline" target="_blank" class="text-slate-400 hover:text-white text-lg">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
-          <h3 class="text-2xl font-bold text-white mt-4">Enterprise DevSecOps CI/CD Pipeline</h3>
-          <p class="text-slate-300 text-sm mt-3 leading-relaxed">
-            Pipeline corporativo de entrega contínua automatizado de ponta a ponta com GitHub Actions. Integração de verificação estática de vulnerabilidades com <strong>Trivy</strong>, auditoria anti-vazamento de segredos com <strong>Gitleaks</strong> e builds <strong>Docker multi-stage</strong> otimizados.
-          </p>
-          <div class="flex flex-wrap gap-2 mt-6">
-            <span class="tech-tag">GitHub Actions</span>
-            <span class="tech-tag">Docker</span>
-            <span class="tech-tag">Trivy</span>
-            <span class="tech-tag">Gitleaks</span>
-            <span class="tech-tag">SonarQube</span>
-          </div>
-          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-xs font-mono text-emerald-400"><i class="fa-solid fa-circle-check mr-1.5"></i>Segurança em Shift-Left</span>
-            <a href="https://github.com/Casiati/devsecops-ci-cd-pipeline" target="_blank" class="text-xs font-mono text-cyan-400 hover:underline">Ver no GitHub →</a>
-          </div>
-        </div>
-
-        <!-- Project 2: Terraform AWS Hands-On -->
-        <div class="project-card" data-category="iac">
-          <div class="project-header">
-            <div class="flex items-center gap-2">
-              <span class="tag-pill bg-amber-500/10 text-amber-400 border-amber-500/30">AWS Cloud</span>
-              <span class="tag-pill bg-purple-500/10 text-purple-400 border-purple-500/30">Terraform</span>
-            </div>
-            <a href="https://github.com/Casiati/terraform-aws-hands-on" target="_blank" class="text-slate-400 hover:text-white text-lg">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
-          <h3 class="text-2xl font-bold text-white mt-4">Modular AWS Infrastructure with Terraform</h3>
-          <p class="text-slate-300 text-sm mt-3 leading-relaxed">
-            Provisionamento modular e determinístico na nuvem AWS. Criação de rede VPC (subnets públicas/privadas, NAT Gateway, Route Tables), instâncias de computação EC2, banco de dados gerenciado RDS, regras de Security Groups e IAM Policies com boas práticas de SAA.
-          </p>
-          <div class="flex flex-wrap gap-2 mt-6">
-            <span class="tech-tag">Terraform</span>
-            <span class="tech-tag">AWS VPC</span>
-            <span class="tech-tag">AWS EC2</span>
-            <span class="tech-tag">AWS RDS</span>
-            <span class="tech-tag">IAM & S3</span>
-          </div>
-          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-xs font-mono text-cyan-400"><i class="fa-solid fa-circle-check mr-1.5"></i>Infraestrutura como Código</span>
-            <a href="https://github.com/Casiati/terraform-aws-hands-on" target="_blank" class="text-xs font-mono text-cyan-400 hover:underline">Ver no GitHub →</a>
-          </div>
-        </div>
-
-        <!-- Project 3: Nubank Clone Mobile -->
-        <div class="project-card" data-category="mobile">
-          <div class="project-header">
-            <div class="flex items-center gap-2">
-              <span class="tag-pill bg-purple-500/10 text-purple-400 border-purple-500/30">Flutter / Dart</span>
-              <span class="tag-pill bg-cyan-500/10 text-cyan-400 border-cyan-500/30">Clean Architecture</span>
-            </div>
-            <a href="https://github.com/Casiati/nubank_clone" target="_blank" class="text-slate-400 hover:text-white text-lg">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
-          <h3 class="text-2xl font-bold text-white mt-4">Nubank App Clone & Clean Architecture</h3>
-          <p class="text-slate-300 text-sm mt-3 leading-relaxed">
-            Recriação e refatoração completa da interface do Nubank em Flutter/Dart. Arquitetura altamente desacoplada em widgets modulares, gerenciamento de estado reativo isolado com <code>ChangeNotifier</code>, suporte a Light/Dark Mode e cobertura completa de testes unitários e de widget.
-          </p>
-          <div class="flex flex-wrap gap-2 mt-6">
-            <span class="tech-tag">Flutter</span>
-            <span class="tech-tag">Dart</span>
-            <span class="tech-tag">State Management</span>
-            <span class="tech-tag">Unit & Widget Tests</span>
-          </div>
-          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-xs font-mono text-purple-400"><i class="fa-solid fa-circle-check mr-1.5"></i>Testes Automatizados</span>
-            <a href="https://github.com/Casiati/nubank_clone" target="_blank" class="text-xs font-mono text-cyan-400 hover:underline">Ver no GitHub →</a>
-          </div>
-        </div>
-
-        <!-- Project 4: AWS Implementation Case -->
-        <div class="project-card" data-category="iac">
-          <div class="project-header">
-            <div class="flex items-center gap-2">
-              <span class="tag-pill bg-amber-500/10 text-amber-400 border-amber-500/30">Cloud Migration</span>
-              <span class="tag-pill bg-emerald-500/10 text-emerald-400 border-emerald-500/30">AWS Architecture</span>
-            </div>
-            <a href="https://github.com/Casiati/RELAT-RIO_IMPLEMENTA-O_AWS" target="_blank" class="text-slate-400 hover:text-white text-lg">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
-          <h3 class="text-2xl font-bold text-white mt-4">Relatório de Arquitetura & Implementação AWS</h3>
-          <p class="text-slate-300 text-sm mt-3 leading-relaxed">
-            Estudo de caso e relatório de arquitetura focado na migração e estruturação de serviços corporativos em nuvem AWS, com análise de custo, segurança, redução de latência e alta disponibilidade.
-          </p>
-          <div class="flex flex-wrap gap-2 mt-6">
-            <span class="tech-tag">AWS Cloud</span>
-            <span class="tech-tag">Well-Architected</span>
-            <span class="tech-tag">Cost Optimization</span>
-          </div>
-          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
-            <span class="text-xs font-mono text-amber-400"><i class="fa-solid fa-circle-check mr-1.5"></i>Case de Arquitetura</span>
-            <a href="https://github.com/Casiati/RELAT-RIO_IMPLEMENTA-O_AWS" target="_blank" class="text-xs font-mono text-cyan-400 hover:underline">Ver no GitHub →</a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- TERMINAL INTERATIVO SECTION -->
-    <section id="terminal" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/60">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="section-tag font-mono text-cyan-400"><i class="fa-solid fa-terminal mr-2"></i>DevOps CLI Simulator</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Terminal Interativo</h2>
-        <p class="text-slate-400 mt-3 text-sm sm:text-base">
-          Experimente comandos interativos como <code class="bg-slate-900 px-2 py-0.5 rounded text-cyan-300">help</code>, <code class="bg-slate-900 px-2 py-0.5 rounded text-cyan-300">certifications</code>, <code class="bg-slate-900 px-2 py-0.5 rounded text-cyan-300">terraform</code> ou <code class="bg-slate-900 px-2 py-0.5 rounded text-cyan-300">contact</code>.
-        </p>
-      </div>
-
-      <div class="max-w-4xl mx-auto terminal-window shadow-2xl shadow-cyan-950/40">
-        <div class="terminal-bar">
-          <div class="flex items-center gap-2">
-            <span class="terminal-dot bg-red-500"></span>
-            <span class="terminal-dot bg-amber-500"></span>
-            <span class="terminal-dot bg-emerald-500"></span>
-          </div>
-          <div class="terminal-title font-mono text-xs text-slate-400">
-            lucas@casiati-cloud-node-01:~ (zsh)
-          </div>
-          <button id="clearTerminalBtn" class="text-xs text-slate-400 hover:text-white font-mono flex items-center gap-1">
-            <i class="fa-solid fa-trash-can"></i> clear
-          </button>
-        </div>
-
-        <div class="terminal-body font-mono text-xs sm:text-sm" id="terminalOutput">
-          <p class="text-slate-400">Bem-vindo ao terminal de Lucas Robiati (DevOps / Cloud Engineer).</p>
-          <p class="text-slate-400">Digite <span class="text-cyan-400 font-bold">help</span> para visualizar os comandos disponíveis.</p>
-          <div class="terminal-line mt-3">
-            <span class="text-emerald-400">lucas@cloud</span>:<span class="text-cyan-400">~</span>$ <span class="text-white">whoami</span>
-          </div>
-          <div class="terminal-response text-slate-300">Lucas Robiati — DevOps & Cloud Platform Engineer | Especialista em AWS, Terraform, Docker, Kubernetes & DevSecOps.</div>
-        </div>
-
-        <!-- Terminal Input Line (without autofocus) -->
-        <div class="terminal-input-row font-mono text-xs sm:text-sm">
-          <span class="text-emerald-400">lucas@cloud</span>:<span class="text-cyan-400">~</span>$&nbsp;
-          <input type="text" id="terminalInput" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="digite um comando...">
-        </div>
-      </div>
-    </section>
-
-    <!-- NETWORKING & FOOTER -->
-    <section id="contato" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/60 text-center">
-      <div class="max-w-3xl mx-auto">
-        <span class="section-tag">Networking & Conexões</span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-3">
-          Vamos trocar experiências sobre Cloud & DevOps?
-        </h2>
-        <p class="text-slate-300 mt-6 text-base sm:text-lg leading-relaxed">
-          Sempre em busca de compartilhar conhecimento, trocar ideias sobre arquiteturas em nuvem, automações e boas práticas no ecossistema de tecnologia.
-        </p>
-
-        <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
-          <a href="https://www.linkedin.com/in/lucas-robiati-129795133/" target="_blank" rel="noopener noreferrer" class="btn-primary text-base py-3 px-6">
-            <i class="fa-brands fa-linkedin text-xl"></i>
-            <span>Conectar no LinkedIn</span>
-          </a>
-
-          <a href="https://github.com/Casiati" target="_blank" rel="noopener noreferrer" class="btn-secondary text-base py-3 px-6">
-            <i class="fa-brands fa-github text-xl"></i>
-            <span>Perfil no GitHub</span>
-          </a>
-
-          <button id="copyEmailBtn" class="btn-secondary text-base py-3 px-6 group" data-email="lucasrobiati@gmail.com">
-            <i class="fa-solid fa-envelope text-cyan-400 group-hover:scale-110 transition-transform"></i>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/lucas-robiati-129795133/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="ctaLinkedIn">LinkedIn</a>
+          <a href="https://github.com/Casiati" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" id="ctaGitHub">GitHub</a>
+          <button class="btn btn-ghost" id="copyEmailBtn" data-email="lucasrobiati@gmail.com">
             <span id="copyEmailText">Copiar E-mail</span>
           </button>
         </div>
@@ -688,20 +463,20 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-slate-900 bg-slate-950/80 py-8 px-4 text-center font-mono text-xs text-slate-400">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p>© 2026 Lucas Robiati (Casiati). Construindo infraestrutura resiliente e automatizada ☁️</p>
-      <div class="flex items-center gap-4">
-        <a href="https://github.com/Casiati" target="_blank" class="hover:text-cyan-400 transition-colors">GitHub</a>
-        <a href="https://www.linkedin.com/in/lucas-robiati-129795133/" target="_blank" class="hover:text-cyan-400 transition-colors">LinkedIn</a>
-        <a href="#hero" class="hover:text-cyan-400 transition-colors">Voltar ao topo ↑</a>
-      </div>
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="mono footer-copy">© 2026 Lucas Robiati (Casiati) — Taquaritinga, SP</p>
+      <nav class="footer-links mono">
+        <a href="https://github.com/Casiati" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/lucas-robiati-129795133/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+        <a href="#hero" class="footer-link">↑ Topo</a>
+      </nav>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="js/main.js"></script>
-  <script src="js/terminal.js"></script>
 </body>
 </html>
